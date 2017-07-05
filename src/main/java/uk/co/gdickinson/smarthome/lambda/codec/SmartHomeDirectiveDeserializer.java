@@ -4,6 +4,9 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
+import com.google.gson.reflect.TypeToken;
+import uk.co.gdickinson.smarthome.lambda.payload.Request;
+import uk.co.gdickinson.smarthome.lambda.payload.Response;
 
 import java.lang.reflect.Type;
 
@@ -17,6 +20,7 @@ public class SmartHomeDirectiveDeserializer implements JsonDeserializer<SmartHom
 
     Header header = jsonDeserializationContext
       .deserialize(jsonElement.getAsJsonObject().get("header"), Header.class);
+    
 
     SmartHomeDirectiveRequest directive = new SmartHomeDirectiveRequest();
     directive.setHeader(header);
