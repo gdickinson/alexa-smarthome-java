@@ -2,6 +2,8 @@
 
 _A framework for creating Alexa Smart Home Skills in Java_
 
+[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
+
 ## About
 The Amazon Echo products, and the Alexa SmartHome interface opens up all sorts of possibilities for controlling devices
 around the home. Writing an Alexa skill, however, requires writing code for Amazon Lambda. Lambda provides support for
