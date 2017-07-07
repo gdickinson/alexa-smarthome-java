@@ -17,6 +17,7 @@ public class SmartHomeDirectiveDeserializer implements JsonDeserializer<SmartHom
 
     Header header = jsonDeserializationContext
       .deserialize(jsonElement.getAsJsonObject().get("header"), Header.class);
+    
 
     SmartHomeDirectiveRequest directive = new SmartHomeDirectiveRequest();
     directive.setHeader(header);

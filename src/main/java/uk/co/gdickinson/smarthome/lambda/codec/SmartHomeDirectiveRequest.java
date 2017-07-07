@@ -2,7 +2,7 @@ package uk.co.gdickinson.smarthome.lambda.codec;
 
 import com.google.gson.JsonElement;
 
-public class SmartHomeDirectiveRequest{
+public class SmartHomeDirectiveRequest {
   private Header header;
   private JsonElement payload;
 

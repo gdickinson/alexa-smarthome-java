@@ -50,7 +50,7 @@ public enum Action {
 
   private final String stringValue;
 
-  private Action(String stringValue) {
+  Action(String stringValue) {
     this.stringValue = stringValue;
   }
 
