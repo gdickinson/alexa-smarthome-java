@@ -5,6 +5,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_f72dca7a36cb_key -iv $encrypted_f72dca7a36cb_iv
   -in deployscripts/codesigning.asc.enc -out deployscripts/codesigning.asc -d
 after_success:
+- chmod u+x deployscripts/mvn-deploy.sh
 - ./deployscripts/mvn-deploy.sh
 env:
   global:
