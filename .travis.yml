@@ -3,7 +3,7 @@ jdk:
 - oraclejdk8
 before_install:
 - openssl aes-256-cbc -K $encrypted_f72dca7a36cb_key -iv $encrypted_f72dca7a36cb_iv
-  -in codesigning.asc.enc -out ~deployscripts/codesigning.asc -d
+  -in deployscripts/codesigning.asc.enc -out ~deployscripts/codesigning.asc -d
 env:
   global:
   - secure: kU5liqVhOlKw6mrRY/c+Y2JR30X9Ou3HzKKabB6U52Hcocwrr4ZjEh4MWyBrvPZEwVAdXlNKLkI6orI81IBWZSZtTjPhulZIJlJRXW0s3jQt4FZ/Qb3a5wVsOX7eso8/FcUFP+B7vN8KQLnR6dY4PLfY2ivFQjsNvXyd/Nd8sGkD1fU8/LTS0ewaie6fk4DEjWVdXV9fOgr8WZBu0gi3ZqYCSJPQdpkIKmxo6WYwnRLscpADeiucRfF2KWsN6EHrjp5dewWeLdYg9YdUlhXDjHeCmlBZLQQBf64phVglSVVw3CmVKNLhnkzUeFUglMzJRW71ulExhvHSAsv8c1l2k6/vFZQXnkBprcT/jrtV39nEWF3L979HpfYotGKIHc72wxumE+lbD6Iak5o8Jb5CyUnjpJVEUSaBFSJmyAevd39CuR+yB8IBX2zXOycxm1YxmBCzGRiVeeu4DxavEQZDvi5Y2P40w1tapPoQWFinG/9ENcxrrpvAKiSwbrvgKvOmV+73oudIu+HD1NoI69VT5qftYnuHyYUbm1etAfyf5tFg1gD4hzMPqtnrv2n3NlCDsCmLU7UE82FpNWmNOxAlhOE7/Cw+VHVM5hQWRSQpIl0+86k41LQNl54wj5Ro1A13FPHbLmhn+hqNN5Rsgzw6Ff4Pl7UyNyw+XGuqE5Uzc1M=
