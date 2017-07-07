@@ -19,5 +19,9 @@ This software attempts to bridge that gap by providing a small framework to cut 
 scaffolding for authors of Amazon Lambda functions for Alexa Smart Home Skills. It has minimal dependencies, and all
 business logic is left up to the user to implement, using whatever additional libraries they wish.
 
+## Project State
+I have used this myself in a personal project and it "works for me", as they say. I'm still working on adding more tests,
+and implementing object types that I didn't happen to need.
+
 ## Contact
 You can find me on Twitter at [@gdickinson](http://twitter.com/gdickinson).
