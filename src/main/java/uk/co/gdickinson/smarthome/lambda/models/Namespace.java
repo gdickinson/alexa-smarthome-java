@@ -14,7 +14,7 @@ public enum Namespace {
 
   private String stringValue;
 
-  private Namespace(String stringValue) {
+  Namespace(String stringValue) {
     this.stringValue = stringValue;
   }
 
