@@ -8,7 +8,7 @@ public class GetTemperatureReadingRequest extends Request<GetTemperatureReadingR
 
   @Override
   public MessageName getMessageName() {
-    return MessageName.GET_TEMPERATURE_READING_RESPONSE;
+    return MessageName.GET_TEMPERATURE_READING_REQUEST;
   }
 
   public Appliance getAppliance() {

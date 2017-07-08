@@ -29,6 +29,6 @@ public class DecrementPercentageRequest extends Request<DecrementPercentageConfi
 
   @Override
   public MessageName getMessageName() {
-    return MessageName.DECREMENT_COLOR_TEMPERATURE_REQUEST;
+    return MessageName.DECREMENT_PERCENTAGE_REQUEST;
   }
 }
