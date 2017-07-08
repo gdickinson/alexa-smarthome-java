@@ -4,7 +4,7 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-import uk.co.gdickinson.smarthome.lambda.codec.Header;
+import uk.co.gdickinson.smarthome.lambda.payload.Header;
 import uk.co.gdickinson.smarthome.lambda.codec.PayloadDeserializer;
 import uk.co.gdickinson.smarthome.lambda.codec.SmartHomeDirectiveRequest;
 import uk.co.gdickinson.smarthome.lambda.codec.SmartHomeDirectiveResponse;

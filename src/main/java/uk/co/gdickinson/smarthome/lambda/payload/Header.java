@@ -1,4 +1,4 @@
-package uk.co.gdickinson.smarthome.lambda.codec;
+package uk.co.gdickinson.smarthome.lambda.payload;
 
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 import uk.co.gdickinson.smarthome.lambda.models.Namespace;

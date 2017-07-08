@@ -1,6 +1,7 @@
 package uk.co.gdickinson.smarthome.lambda.codec;
 
 import com.google.gson.JsonElement;
+import uk.co.gdickinson.smarthome.lambda.payload.Header;
 
 public class SmartHomeDirectiveRequest {
   private Header header;
