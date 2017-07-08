@@ -3,7 +3,7 @@ package uk.co.gdickinson.smarthome.lambda.payload;
 import uk.co.gdickinson.smarthome.lambda.models.Appliance;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
-public class IncrementPercentageRequest implements Request<IncrementPercentageConfirmation> {
+public class IncrementPercentageRequest extends Request<IncrementPercentageConfirmation> {
   private Appliance appliance;
   private Float deltaPercentage;
 

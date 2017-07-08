@@ -3,7 +3,7 @@ package uk.co.gdickinson.smarthome.lambda.payload;
 import uk.co.gdickinson.smarthome.lambda.models.Appliance;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
-public class RetrieveCameraStreamUriRequest implements Request<RetrieveCameraStreamUriResponse> {
+public class RetrieveCameraStreamUriRequest extends Request<RetrieveCameraStreamUriResponse> {
   private String directedId;
   private Appliance appliance;
 

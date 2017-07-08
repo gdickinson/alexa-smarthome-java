@@ -3,8 +3,7 @@ package uk.co.gdickinson.smarthome.lambda.payload;
 import uk.co.gdickinson.smarthome.lambda.models.Appliance;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
-public class TurnOnRequest implements Request<TurnOnConfirmation> {
-  private String accessToken;
+public class TurnOnRequest extends Request<TurnOnConfirmation> {
   private Appliance appliance;
 
   @Override
@@ -18,13 +17,5 @@ public class TurnOnRequest implements Request<TurnOnConfirmation> {
 
   public void setAppliance(Appliance appliance) {
     this.appliance = appliance;
-  }
-
-  public String getAccessToken() {
-    return accessToken;
-  }
-
-  public void setAccessToken(String accessToken) {
-    this.accessToken = accessToken;
   }
 }

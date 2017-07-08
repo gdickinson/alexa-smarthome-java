@@ -20,7 +20,7 @@ import uk.co.gdickinson.smarthome.lambda.models.MessageName;
  *
  * Expect only Appliance.applianceId and Appliance.additionalApplianceDetails to be set.
  */
-public class SetColorTemperatureRequest implements Request<SetColorTemperatureConfirmation> {
+public class SetColorTemperatureRequest extends Request<SetColorTemperatureConfirmation> {
   private Appliance appliance;
   private ColorTemperature colorTemperature;
 

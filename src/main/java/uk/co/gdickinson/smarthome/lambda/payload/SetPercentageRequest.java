@@ -3,7 +3,7 @@ package uk.co.gdickinson.smarthome.lambda.payload;
 import uk.co.gdickinson.smarthome.lambda.models.Appliance;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
-public class SetPercentageRequest implements Request<SetPercentageConfirmation> {
+public class SetPercentageRequest extends Request<SetPercentageConfirmation> {
   private Appliance appliance;
   private Float percentageState;
 

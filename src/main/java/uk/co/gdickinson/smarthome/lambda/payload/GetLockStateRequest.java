@@ -3,7 +3,7 @@ package uk.co.gdickinson.smarthome.lambda.payload;
 import uk.co.gdickinson.smarthome.lambda.models.Appliance;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
-public class GetLockStateRequest implements Request<GetLockStateResponse> {
+public class GetLockStateRequest extends Request<GetLockStateResponse> {
   private Appliance appliance;
 
   public Appliance getAppliance() {

@@ -4,7 +4,7 @@ import uk.co.gdickinson.smarthome.lambda.models.Appliance;
 import uk.co.gdickinson.smarthome.lambda.models.LockState;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 
-public class SetLockStateRequest implements Request<SetLockStateConfirmation> {
+public class SetLockStateRequest extends Request<SetLockStateConfirmation> {
   private Appliance appliance;
   private LockState lockState;
 
