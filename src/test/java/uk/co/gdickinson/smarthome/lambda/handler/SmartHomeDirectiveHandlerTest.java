@@ -12,7 +12,6 @@ import uk.co.gdickinson.smarthome.lambda.payload.Header;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Date;
 
 public class SmartHomeDirectiveHandlerTest {
@@ -49,10 +48,9 @@ public class SmartHomeDirectiveHandlerTest {
     byte[] requestBytes = gson.toJson(req).getBytes();
 
     InputStream in = new ByteArrayInputStream(requestBytes);
-    OutputStream out = new ByteArrayOutputStream();
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
 
     smartHomeDirectiveHandler.handleRequest(in, out, null);
-
-    System.out.println(out.toString());
+    // For now, let's just check this doesn't throw.
   }
 }
