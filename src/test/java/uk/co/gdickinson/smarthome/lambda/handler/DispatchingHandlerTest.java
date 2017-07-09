@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
-import uk.co.gdickinson.smarthome.lambda.payload.Request;
 import uk.co.gdickinson.smarthome.lambda.payload.Response;
 
 import static org.junit.Assert.assertSame;
@@ -18,30 +17,12 @@ public class DispatchingHandlerTest {
   private static MessageName SUPPORTED_MESSAGE_NAME = MessageName.GET_LOCK_STATE_REQUEST;
   private static MessageName UNSUPPORTED_MESSAGE_NAME = MessageName.DECREMENT_COLOR_TEMPERATURE_REQUEST;
 
-  private static class TestResponse implements Response {
-    @Override
-    public MessageName getMessageName() {
-      return SUPPORTED_MESSAGE_NAME;
-    }
-  }
-
-  private static class TestRequest extends Request<TestResponse> {
-    private MessageName messageName;
-    public TestRequest(MessageName messageName) {
-      this.messageName = messageName;
-    }
-    @Override
-    public MessageName getMessageName() {
-      return this.messageName;
-    }
-  }
-
-  private static TestRequest SUPPORTED_TEST_REQUEST = new TestRequest(SUPPORTED_MESSAGE_NAME);
-  private static TestResponse TEST_RESPONSE = new TestResponse();
-  private static TestRequest UNSUPPORTED_TEST_REQUEST = new TestRequest(UNSUPPORTED_MESSAGE_NAME);
+  private static TestClasses.TestRequest SUPPORTED_TEST_REQUEST = new TestClasses.TestRequest(SUPPORTED_MESSAGE_NAME);
+  private static TestClasses.TestResponse TEST_RESPONSE = new TestClasses.TestResponse(SUPPORTED_MESSAGE_NAME);
+  private static TestClasses.TestRequest UNSUPPORTED_TEST_REQUEST = new TestClasses.TestRequest(UNSUPPORTED_MESSAGE_NAME);
 
   @Mock
-  private RequestHandler<TestRequest, TestResponse> testRequestHandler;
+  private RequestHandler<TestClasses.TestRequest, TestClasses.TestResponse> testRequestHandler;
   private DispatchingHandler dispatchingHandler;
 
   @Before
