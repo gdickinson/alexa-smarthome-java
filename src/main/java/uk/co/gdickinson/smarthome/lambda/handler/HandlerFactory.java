@@ -20,6 +20,11 @@ public class HandlerFactory {
   }
 
   public <Req extends Request<Res>, Res extends Response> RequestHandler<Req, Res> getHandler(MessageName name) {
-    return handlerMap.get(name);
+    RequestHandler<Req, Res> handler = handlerMap.get(name);
+    if (handler != null) {
+      return handler;
+    } else {
+      throw new UnsupportedOperationException(String.format("No handler registered for %s", name));
+    }
   }
 }

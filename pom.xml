@@ -58,6 +58,12 @@
             <artifactId>junit</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <dependency>
+            <scope>test</scope>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>

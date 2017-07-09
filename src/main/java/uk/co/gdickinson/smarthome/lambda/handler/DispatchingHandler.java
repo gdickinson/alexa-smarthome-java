@@ -14,3 +14,4 @@ class DispatchingHandler {
     RequestHandler<Req, Res> handler = factory.getHandler(request.getMessageName());
     return handler.handle(request);
   }
+}
