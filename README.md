@@ -5,7 +5,7 @@ _A framework for creating Alexa Smart Home Skills in Java_
 [![Build Status](https://travis-ci.org/gdickinson/alexa-smarthome-java.svg?branch=master)](https://travis-ci.org/gdickinson/alexa-smarthome-java)
 
 ## About
-The Amazon Echo products, and the Alexa SmartHome interface opens up all sorts of possibilities for controlling devices
+The Amazon Echo products, and the Alexa Smart Home interface opens up all sorts of possibilities for controlling devices
 around the home. Writing an Alexa skill, however, requires writing code for Amazon Lambda. Lambda provides support for
 a strong array popular languages including Node.js, Python, and Java, but very few examples are given to 
 Java in terms of Smart Home Skills, and there are no canonical Java object bindings for the request/response objects
@@ -18,6 +18,11 @@ special handling.
 This software attempts to bridge that gap by providing a small framework to cut down on boilerplate and
 scaffolding for authors of Amazon Lambda functions for Alexa Smart Home Skills. It has minimal dependencies, and all
 business logic is left up to the user to implement, using whatever additional libraries they wish.
+
+In short, it's tedious to write all this object serialization - I wrote all the boilerplate so you don't have to.
+
+## Usage
+
 
 ## Project State
 I have used this myself in a personal project and it "works for me", as they say. I'm still working on adding more tests,
