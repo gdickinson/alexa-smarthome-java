@@ -5,6 +5,6 @@ import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 public class IncrementColorTemperatureConfirmation extends ColorTemperatureChangeConfirmation {
   @Override
   public MessageName getMessageName() {
-    return MessageName.INCREMENT_TARGET_TEMPERATURE_CONFIRMATION;
+    return MessageName.INCREMENT_COLOR_TEMPERATURE_CONFIRMATION;
   }
 }

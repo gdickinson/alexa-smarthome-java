@@ -4,7 +4,8 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-import uk.co.gdickinson.smarthome.lambda.codec.Header;
+import com.google.gson.stream.JsonWriter;
+import uk.co.gdickinson.smarthome.lambda.payload.Header;
 import uk.co.gdickinson.smarthome.lambda.codec.PayloadDeserializer;
 import uk.co.gdickinson.smarthome.lambda.codec.SmartHomeDirectiveRequest;
 import uk.co.gdickinson.smarthome.lambda.codec.SmartHomeDirectiveResponse;
@@ -12,10 +13,7 @@ import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 import uk.co.gdickinson.smarthome.lambda.payload.Request;
 import uk.co.gdickinson.smarthome.lambda.payload.Response;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 
 public abstract class SmartHomeDirectiveHandler implements RequestStreamHandler {
   private static Gson gson = new Gson();
@@ -47,11 +45,20 @@ public abstract class SmartHomeDirectiveHandler implements RequestStreamHandler 
       throw new IOException(e);
     }
 
+
     SmartHomeDirectiveResponse response = new SmartHomeDirectiveResponse();
 
     Header responseHeader = new Header();
     responseHeader.setName(responsePayload.getMessageName());
+    responseHeader.setMessageId(request.getHeader().getMessageId());
+    responseHeader.setPayloadVersion(request.getHeader().getPayloadVersion());
+    responseHeader.setNamespace(request.getHeader().getNamespace());
 
+    response.setHeader(responseHeader);
     response.setPayload(responsePayload);
+
+    OutputStreamWriter writer = new OutputStreamWriter(outputStream);
+    writer.write(gson.toJson(response, SmartHomeDirectiveResponse.class));
+    writer.flush();
   }
 }

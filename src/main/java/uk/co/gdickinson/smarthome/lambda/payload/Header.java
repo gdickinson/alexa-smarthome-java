@@ -1,4 +1,4 @@
-package uk.co.gdickinson.smarthome.lambda.codec;
+package uk.co.gdickinson.smarthome.lambda.payload;
 
 import uk.co.gdickinson.smarthome.lambda.models.MessageName;
 import uk.co.gdickinson.smarthome.lambda.models.Namespace;
@@ -39,5 +39,27 @@ public class Header {
 
   public void setPayloadVersion(String payloadVersion) {
     this.payloadVersion = payloadVersion;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    Header header = (Header) o;
+
+    if (!getMessageId().equals(header.getMessageId())) return false;
+    if (getName() != header.getName()) return false;
+    if (getNamespace() != header.getNamespace()) return false;
+    return getPayloadVersion().equals(header.getPayloadVersion());
+  }
+
+  @Override
+  public int hashCode() {
+    int result = getMessageId().hashCode();
+    result = 31 * result + getName().hashCode();
+    result = 31 * result + getNamespace().hashCode();
+    result = 31 * result + getPayloadVersion().hashCode();
+    return result;
   }
 }

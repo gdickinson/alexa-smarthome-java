@@ -7,7 +7,7 @@ import uk.co.gdickinson.smarthome.lambda.models.MessageName;
  * Request to decrease the numerical setting of the specified device by the specified percentage.
 
  */
-public class DecrementPercentageRequest implements Request<DecrementPercentageConfirmation> {
+public class DecrementPercentageRequest extends Request<DecrementPercentageConfirmation> {
   private Appliance appliance;
   private Float deltaPercentage;
 
@@ -29,6 +29,6 @@ public class DecrementPercentageRequest implements Request<DecrementPercentageCo
 
   @Override
   public MessageName getMessageName() {
-    return MessageName.DECREMENT_COLOR_TEMPERATURE_REQUEST;
+    return MessageName.DECREMENT_PERCENTAGE_REQUEST;
   }
 }
