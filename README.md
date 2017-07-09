@@ -2,7 +2,7 @@
 
 _A framework for creating Alexa Smart Home Skills in Java_
 
-[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
+[![Build Status](https://travis-ci.org/gdickinson/alexa-smarthome-java.svg?branch=master)](https://travis-ci.org/gdickinson/alexa-smarthome-java)
 
 ## About
 The Amazon Echo products, and the Alexa SmartHome interface opens up all sorts of possibilities for controlling devices
